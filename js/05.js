@@ -1,17 +1,23 @@
-// Destructuring con 2 objetos
+//Manipulacion de objetos
+
 const producto = {
-    nombre: 'Tablet',
-    precio: 300,
-    disponible: true
+    nombre : "Tablet",
+    precio : 300,
+    disponible : true,
 }
 
-const cliente = {
-    nombre: 'Juan',
-    premium: true
-}
+//para evitar que un objeto sea modificado
+Object.freeze(producto)
 
-const { nombre } = producto;
-const { nombre: nombreCliente } = cliente
+//modificar las propiedades existentes pero no añadir nuevas ni borrarlas
+Object.seal(producto)
 
-console.log(nombre)
-console.log(nombreCliente)
+//Rescribir un valor
+producto.nombre = "Monitor Curvo"
+
+//si no existe, lo va a añadir 
+producto.imagen = "imagen.jpg"
+
+delete producto.disponible
+
+console.table(producto)

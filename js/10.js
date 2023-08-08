@@ -1,20 +1,8 @@
-// Map y For Each
-const tecnologias = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'];
+//Destructuring arrays
+
+const tecnologias = ['HTML', 'CSS', 'Javascript', 'React', 'Node.js']
+
+const [ , , , , var5] = tecnologias
 
 
-for(let i = 0; i < tecnologias.length; i++) {
-    console.log(tecnologias[i])
-}
-
-// foreach se ejecuta una vez por cada elemento del array
-tecnologias.forEach( tecnologia => {
-    console.log(tecnologia)
-})
-
-tecnologias.map( tecnologia => {
-    console.log(tecnologia)
-})
-
-// La diferencia es que map te retorna un nuevo array
-const arrayForEcah =  tecnologias.forEach( tecnologia => tecnologia)
-const arrayMap =  tecnologias.map( tecnologia => tecnologia)
+console.log(var5);

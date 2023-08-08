@@ -1,45 +1,18 @@
-// Funciones - Existen diferentes formas de crear funciones en JS, 
+//Iteradores en JS
 
-/*
-    El hoisting es una forma de expresarse a como se ejecuta JavaScript(específicamente
-    las fases de creación y ejecución). 
+const tecnologias = ['HTML', 'CSS', 'Javascript', 'React', 'Node.js']
 
-    Por lo tanto JS, registra primeros los Funciones, y en una segunda vuelta las ejecuta, con las variables no pasa esoo
+//forEach se ejecuta una vez por cada elemento, si no hay ninguno no se ejecuta ninguna vez
+//permite acceder a cada elemento del array
 
+const arrayForEach = tecnologias.forEach( function (tech) {
+    return tech
+})
 
-*/
+//map sirve para crear un nuevo arreglo
+const arrayMap = tecnologias.map( function (tech){
+    return tech
+})
 
-function sumar() {
-    console.log(2 + 2)
-}
-sumar();
-
-// Moverla arriba y sigue funcionando...
-
-function sumar() {
-    return 2 + 2
-}
-
-
-const resultado = sumar();
-
-// Las funciones también toman parametros
-
-function sumar(numero1, numero2) {
-    return numero1 + numero2
-}
-
-const resultado = sumar(2, 30)
-
-// Las funciones pueden tener parametros por default
-function sumar(numero1 = 0, numero2 = 0) {
-    return numero1 + numero2
-}
-
-const resultado2 = sumar(2, 30)
-const resultado3 = sumar(12)
-const resultado4 = sumar()
-
-console.log(resultado2)
-console.log(resultado3)
-console.log(resultado4)
+console.log(arrayForEach);
+console.log(arrayMap);

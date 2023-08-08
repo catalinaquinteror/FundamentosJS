@@ -1,31 +1,41 @@
-// Objetos
+//Tipos de datos
 
-// Los objetos pueden contener una gran información en una sola variable, es de los temas que más se utilizan en React, veamos como crear un objeto
+//undefined
+let cliente
+console.log(cliente)
+console.log(typeof cliente);
 
-const producto = {
-    nombre: 'Tablet',
-    precio: 300,
-    disponible: true
-}
+//Boolean
+const descuento = true
+console.log(descuento);
+console.log(typeof descuento);
 
-// Acceder a las propiedades de un objeto
-console.log(producto)
-console.log(producto.nombre)
-console.log(producto.precio)
-console.log(producto.disponible)
+//Number
+const numero1 = 20.20
+const numero2 = 30
+const numero3 = -100
 
-// Destructuring de Objetos
-const { nombre, precio, disponible } = producto
+console.log(typeof numero1);
 
-console.log(nombre)
-console.log(precio)
-console.log(disponible)
+//string
+const alumno = "Juan"
 
-// Object Literal enhacement...
-const autenticado = true
-const usuario = 'Juan'
+//BigInt
+const numeroGrande = BigInt(45645694854459)
+console.log(typeof numeroGrande);
 
-const nuevoObjeto = {
-    autenticado: autenticado,
-    usuario: usuario
-}
+const numero = 10
+const numero02 = 20
+console.log( numero + Number(numeroGrande)); //agregarle el tipo de dato antes modifica el tipo de dato
+
+//symbol
+const primerSymbol = Symbol(30)
+const segundoSymbol = Symbol(30)
+
+console.log(primerSymbol === segundoSymbol);
+
+console.log(primerSymbol.valueOf);
+
+//null
+const descuento2 = null
+console.log(typeof descuento2)

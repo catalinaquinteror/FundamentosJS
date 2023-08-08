@@ -1,7 +1,27 @@
-// Destructuring de Arrays
-const tecnologias = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'];
+//unir 2 o más objetos
 
-const [ html, css, js, react, nodejs ] =  tecnologias
+const producto = {
+    nombre : "Tablet",
+    precio : 300,
+    disponible : true,
+}
 
-// Solo React
-const [ , , , react ] =  tecnologias
+const cliente = {
+    nombre: "Juan",
+    premium: true
+}
+
+// producto.cliente = cliente  //esto modifica/muta el objeto original
+
+// const nuevoObjeto = Object.assign(producto, cliente) //esto tambien modifica el objeto oiriginal si hay valores repetidos
+
+const nuevoObjeto2 = { ...producto, ...cliente } //este no muta el objeto original pero si pierde informacion
+
+const nuevoObjeto3 = {  //este no muta el objeto original y tampoco pierde información
+    producto: {...producto}, //los 3 puntos significan "toma una copia de dicho objeto"
+    cliente: {...cliente}
+}
+
+
+
+

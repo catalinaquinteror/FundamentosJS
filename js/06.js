@@ -1,14 +1,18 @@
-// Arrays
-const tecnologias = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'];
+//Destructuring con 2 o más objetos 
 
-console.log(tecnologias)
-console.table(tecnologias)
+const producto = {
+    nombre : "Tablet",
+    precio : 300,
+    disponible : true,
+}
 
-// Accer a un elemento del array
-console.log(tecnologias[0])
-console.log(tecnologias[10])
+const cliente = {
+    nombre: "Juan",
+    premium: true
+}
 
-// Propiedad de array
-console.log(tecnologias.length)
-console.log(tecnologias.toString())
+const {nombre, precio, disponible } = producto
+const {nombre: nombreCliente, premium } = cliente
 
+console.log(nombre)
+console.log(nombreCliente)
